@@ -1,12 +1,13 @@
 ---
-  - hosts: all
+  - hosts: [WebServers]
     become: yes
 
     tasks:
       - name: Task 01
         apt:
            name: apache2
-           state: yes
+           state: absent
+        when: anisble_os_family = "Debian"
         
       - name: Task 02
         ansible.builtin.copy:
