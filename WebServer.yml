@@ -1,0 +1,19 @@
+---
+  - hosts: all
+    become: yes
+
+    tasks:
+      - name: Task 01
+        apt:
+           name: apache2
+           state: yes
+        
+      - name: Task 02
+        ansible.builtin.copy:
+           src: C:\Users\server\Downloads\modeling-agency-website-template\modeling-agency-website-template
+           dest: /var/www/html/
+
+
+        
+
+    
