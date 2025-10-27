@@ -1,0 +1,27 @@
+---
+   hosts: all
+   become: yes
+   tasks:
+      
+      - name: execeution n debian server
+        apt:
+          name: "{{myapache_web_server}}"
+          state: present
+        when: anibsle_os_family = "Debian"
+
+      - name: copy the files from source to destination
+        file:
+          src: "{{copying_files_into_nodes}}"
+          state: touch
+        when: anisble_os_family = "RedHat"  
+
+      - name: command execution in the ansible nodes
+        apt:
+           name: apache22
+           state: present
+           ignore_errors: yes  
+      
+      - name: deubg module in anisble_os_family
+        deubg:
+            
+       
