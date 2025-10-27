@@ -1,5 +1,5 @@
 ---
-  - hosts: [WebServers]
+  - hosts: all
     become: yes
 
     tasks:
