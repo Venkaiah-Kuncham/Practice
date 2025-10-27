@@ -1,0 +1,11 @@
+[webservers]
+172.31.46.193
+172.31.41.193
+
+
+[dbservers]
+172.31.41.190
+
+var01 = value
+myapache_web_server = apache2
+copying_files_into_nodes   = /home/venkaiah/created_using_Ansibe
