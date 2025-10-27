@@ -17,11 +17,11 @@
 
       - name: command execution in the ansible nodes
         apt:
-           name: apache22
+           name: "{{myerror_skip}}"
            state: present
            ignore_errors: yes  
       
       - name: deubg module in anisble_os_family
         deubg:
-            
+
        
